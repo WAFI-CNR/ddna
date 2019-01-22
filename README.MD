@@ -13,5 +13,5 @@ main ddna-toolbox repo:
    
 The content of this repo is exposed as:
 
-  - http://ddna-toolbox.org/stable/  for the documentation of
+  - https://wafi-cnr.github.io/ddna/stable  for the documentation of
     the latest release
