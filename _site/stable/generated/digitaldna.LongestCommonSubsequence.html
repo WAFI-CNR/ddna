@@ -1,0 +1,546 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>digitaldna.LongestCommonSubsequence &mdash; Digital DNA</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/ddna_wide.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Digital DNA API" href="../api.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> digitaldna
+          
+
+          
+            
+            <img src="../_static/ddna_wide.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">Digital DNA API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#longestcommonsubsequence">LongestCommonSubsequence</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">digitaldna</span></code>.LongestCommonSubsequence</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples-using-digitaldna-longestcommonsubsequence">Examples using <code class="docutils literal notranslate"><span class="pre">digitaldna.LongestCommonSubsequence</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#twitterddnasequencer">TwitterDDNASequencer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#sequenceplots">SequencePlots</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">digitaldna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">Digital DNA API</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">digitaldna</span></code>.LongestCommonSubsequence</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="digitaldna-longestcommonsubsequence">
+<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">digitaldna</span></code>.LongestCommonSubsequence<a class="headerlink" href="#digitaldna-longestcommonsubsequence" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="digitaldna.LongestCommonSubsequence">
+<em class="property">class </em><code class="descclassname">digitaldna.</code><code class="descname">LongestCommonSubsequence</code><span class="sig-paren">(</span><em>in_path=''</em>, <em>out_path='/tmp/glcr_cache'</em>, <em>overwrite=False</em>, <em>window=10</em>, <em>verbosity=2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/lcs.html#LongestCommonSubsequence"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.LongestCommonSubsequence" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Digital DNA Python implementation.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>in_path</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str, optional</span></dt>
+<dd><p class="first last">The name with absolute path of a file containing the sequences you want to process.
+The input file must be a txt file and the first row must contain the number of sequences to read.
+Default: ‘’</p>
+</dd>
+<dt><strong>out_path</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str, optional</span></dt>
+<dd><p class="first last">The output file name with absolute path of the file where the algorithm will save result in case of
+verbosity equals to Verbosity.FILE or Verbosity.FILE_EXTENDED
+Default: ‘/tmp/glcr_cache’</p>
+</dd>
+<dt><strong>overwrite</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str, optional</span></dt>
+<dd><p class="first last">TODO</p>
+</dd>
+<dt><strong>window</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str, optional</span></dt>
+<dd><p class="first last">The size of the window used to compute the cutting threshold between bot and not bot. The cutting point is
+computed by smoothing the curve, deriving the result and taking the first (l.h.s.) local maxima. The window
+parameter influences both smoothing and finding the local maxima.
+It must be 0 &lt; window &lt; n_accounts. If
+- window &gt;= 1 , window is the number of elements
+- 0 &lt; window &lt; 1, window is the percentage of the number of elements
+Default: 10</p>
+</dd>
+<dt><strong>verbosity</strong> <span class="classifier-delimiter">:</span> <span class="classifier">str, optional</span></dt>
+<dd><p class="first">The verbosity parameter is used to specify whether to save results to files or not. It must be:
+- TEST              does not write anything, used for benchmarking
+- MEMORY_ONLY       retrieves only the couples (sequence length, # of accounts), used for plots
+- FILE              produces 2 files, a file named self.out_path + ‘.mat’ where each row contains:</p>
+<blockquote>
+<div><ul class="simple">
+<li>sequence length,</li>
+<li># of accounts</li>
+<li>range of indexes (begin and end).</li>
+</ul>
+<p>And a file named self.out_path + ‘.gsa’ where each row contains the identifier of the
+sequence.</p>
+</div></blockquote>
+<ul class="last simple">
+<li><dl class="first docutils">
+<dt>FILE_EXTENDED     as FILE but the self.in_path + ‘.mat’ file contains also the column of the common</dt>
+<dd>subsequence</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<p>S. Cresci, R. D. Pietro, M. Petrocchi, A. Spognardi and M. Tesconi,
+“Social Fingerprinting: Detection of Spambot Groups Through DNA-Inspired Behavioral Modeling”,
+IEEE Transactions on Dependable and Secure Computing, vol. 15, no. 4, pp. 561-576, 1 July-Aug. 2018,
+<a class="reference external" href="https://ieeexplore.ieee.org/document/7876716">https://ieeexplore.ieee.org/document/7876716</a></p>
+<p>S. Cresci, R. di Pietro, M. Petrocchi, A. Spognardi and M. Tesconi,
+“Exploiting Digital DNA for the Analysis of Similarities in Twitter Behaviours”,
+2017 IEEE International Conference on Data Science and Advanced Analytics (DSAA),
+Tokyo, 2017, pp. 686-695, <a class="reference external" href="https://ieeexplore.ieee.org/document/8259831">https://ieeexplore.ieee.org/document/8259831</a></p>
+<p>M. Arnold, E. Ohlebusch, “Linear Time Algorithms for Generalizations of&nbsp;the&nbsp;Longest Common Substring Problem”,
+Algorithmica, vol 60, pp. 806-818, 4 August 2011, <a class="reference external" href="https://link.springer.com/article/10.1007/s00453-009-9369-1">https://link.springer.com/article/10.1007/s00453-009-9369-1</a></p>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#digitaldna.LongestCommonSubsequence.fit" title="digitaldna.LongestCommonSubsequence.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>(X[,&nbsp;y])</td>
+<td>Computes the longest common subsequence</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#digitaldna.LongestCommonSubsequence.fit_predict" title="digitaldna.LongestCommonSubsequence.fit_predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_predict</span></code></a>(X[,&nbsp;y])</td>
+<td>“Fits the model to the training set X and returns the labels (True for bot, False for non bot) on the training set according to the window parameter.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#digitaldna.LongestCommonSubsequence.get_params" title="digitaldna.LongestCommonSubsequence.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>([deep])</td>
+<td>Get parameters for this estimator.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#digitaldna.LongestCommonSubsequence.plot_LCS" title="digitaldna.LongestCommonSubsequence.plot_LCS"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_LCS</span></code></a>()</td>
+<td>“Plots the longest common subsequence curve as (number of accounts, sequence length)</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#digitaldna.LongestCommonSubsequence.plot_LCS_log" title="digitaldna.LongestCommonSubsequence.plot_LCS_log"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_LCS_log</span></code></a>()</td>
+<td>“Plots the longest common subsequence curve as (log(number of accounts), log(sequence length))</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#digitaldna.LongestCommonSubsequence.predict" title="digitaldna.LongestCommonSubsequence.predict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">predict</span></code></a>([X])</td>
+<td>(EXPERIMENTAL) Predict the labels (True bot, False Not Bot) of X according to lcs and window parameter:.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#digitaldna.LongestCommonSubsequence.set_params" title="digitaldna.LongestCommonSubsequence.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(**params)</td>
+<td>Set the parameters of this estimator.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="digitaldna.LongestCommonSubsequence.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>in_path=''</em>, <em>out_path='/tmp/glcr_cache'</em>, <em>overwrite=False</em>, <em>window=10</em>, <em>verbosity=2</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/lcs.html#LongestCommonSubsequence.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.LongestCommonSubsequence.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.LongestCommonSubsequence.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/lcs.html#LongestCommonSubsequence.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.LongestCommonSubsequence.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Computes the longest common subsequence</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like or sparse matrix of shape = [n_samples, n_features]</span></dt>
+<dd><p class="first last">The training input samples.</p>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None</span></dt>
+<dd><p class="first last">There is no need of a target in a transformer, yet the pipeline API
+requires this parameter.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>self</strong> <span class="classifier-delimiter">:</span> <span class="classifier">object</span></dt>
+<dd><p class="first last">Returns self.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>lcs_index_</strong> <span class="classifier-delimiter">:</span> <span class="classifier">pandas dataframe, shape (distinct couples (lcs, n_of_accounts), 2), default=None</span></dt>
+<dd><p class="first last">The dataframe containing the distict couples lcs, n_of_accounts). Only if :
+verbosity == Verbosity.MEMORY_ONLY</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.LongestCommonSubsequence.fit_predict">
+<code class="descname">fit_predict</code><span class="sig-paren">(</span><em>X</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/lcs.html#LongestCommonSubsequence.fit_predict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.LongestCommonSubsequence.fit_predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Fits the model to the training set X and returns the labels
+(True for bot, False for non bot) on the training set according to the window parameter.
+Parameters
+———-
+X : array-like, shape (n_samples, n_features), default=None</p>
+<blockquote>
+<div>The query sample or samples to compute the Local Outlier Factor
+w.r.t. to the training samples.</div></blockquote>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array, shape (n_samples,)</span></dt>
+<dd><p class="first last">Returns True for bots and False for real timeline.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>lcs_index_</strong> <span class="classifier-delimiter">:</span> <span class="classifier">pandas dataframe, shape (distinct couples (lcs, n_of_accounts), 2), default=None</span></dt>
+<dd><p class="first last">The dataframe containing the distict couples lcs, n_of_accounts)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.LongestCommonSubsequence.get_params">
+<code class="descname">get_params</code><span class="sig-paren">(</span><em>deep=True</em><span class="sig-paren">)</span><a class="headerlink" href="#digitaldna.LongestCommonSubsequence.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>deep</strong> <span class="classifier-delimiter">:</span> <span class="classifier">boolean, optional</span></dt>
+<dd><p class="first last">If True, will return the parameters for this estimator and
+contained subobjects that are estimators.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>params</strong> <span class="classifier-delimiter">:</span> <span class="classifier">mapping of string to any</span></dt>
+<dd><p class="first last">Parameter names mapped to their values.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.LongestCommonSubsequence.plot_LCS">
+<code class="descname">plot_LCS</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/lcs.html#LongestCommonSubsequence.plot_LCS"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.LongestCommonSubsequence.plot_LCS" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Plots the longest common subsequence curve as (number of accounts, sequence length)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>self</strong> <span class="classifier-delimiter">:</span> <span class="classifier">returns an instance of self.</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>lcs_index_</strong> <span class="classifier-delimiter">:</span> <span class="classifier">pandas dataframe, shape (distinct couples (lcs, n_of_accounts), 2), default=None</span></dt>
+<dd><p class="first last">The dataframe containing the distict couples lcs, n_of_accounts)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.LongestCommonSubsequence.plot_LCS_log">
+<code class="descname">plot_LCS_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/lcs.html#LongestCommonSubsequence.plot_LCS_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.LongestCommonSubsequence.plot_LCS_log" title="Permalink to this definition">¶</a></dt>
+<dd><p>“Plots the longest common subsequence curve as (log(number of accounts), log(sequence length))</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>self</strong> <span class="classifier-delimiter">:</span> <span class="classifier">returns an instance of self.</span></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>lcs_index_</strong> <span class="classifier-delimiter">:</span> <span class="classifier">pandas dataframe, shape (distinct couples (lcs, n_of_accounts), 2), default=None</span></dt>
+<dd><p class="first last">The dataframe containing the distict couples lcs, n_of_accounts)</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.LongestCommonSubsequence.predict">
+<code class="descname">predict</code><span class="sig-paren">(</span><em>X=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/lcs.html#LongestCommonSubsequence.predict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.LongestCommonSubsequence.predict" title="Permalink to this definition">¶</a></dt>
+<dd><p>(EXPERIMENTAL) Predict the labels (True bot, False Not Bot) of X according to lcs and window parameter:.
+If X is None, returns the same as fit_predict(X_train).
+Parameters
+———-
+X : array-like, shape (n_samples, n_features), default=None</p>
+<blockquote>
+<div>The query sample or samples to identify bot groups. If None,
+makes prediction on the training data.</div></blockquote>
+<dl class="docutils">
+<dt>y <span class="classifier-delimiter">:</span> <span class="classifier">array, shape (n_samples,)</span></dt>
+<dd>Returns True for bots and False for real timeline.</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.LongestCommonSubsequence.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>**params</em><span class="sig-paren">)</span><a class="headerlink" href="#digitaldna.LongestCommonSubsequence.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator.</p>
+<p>The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form
+<code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible to update each
+component of a nested object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>self</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="examples-using-digitaldna-longestcommonsubsequence">
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">digitaldna.LongestCommonSubsequence</span></code><a class="headerlink" href="#examples-using-digitaldna-longestcommonsubsequence" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.LongestCommonSubsequence` "><div class="figure" id="id1">
+<img alt="../_images/sphx_glr_plot_longest_common_subsequences_thumb.png" src="../_images/sphx_glr_plot_longest_common_subsequences_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_longest_common_subsequences.html#sphx-glr-auto-examples-plot-longest-common-subsequences-py"><span class="std std-ref">Longest Common Subsequences</span></a></span></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.LongestCommonSubsequence` "><div class="figure" id="id2">
+<img alt="../_images/sphx_glr_plot_log_longest_common_subsequences_thumb.png" src="../_images/sphx_glr_plot_log_longest_common_subsequences_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_log_longest_common_subsequences.html#sphx-glr-auto-examples-plot-log-longest-common-subsequences-py"><span class="std std-ref">Longest Common Subsequences (log)</span></a></span></p>
+</div>
+</div><div style='clear:both'></div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../api.html" class="btn btn-neutral" title="Digital DNA API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Giuseppe Gagliano.
+      Last updated on Jan 22, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

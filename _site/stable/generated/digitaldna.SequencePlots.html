@@ -1,0 +1,373 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>digitaldna.SequencePlots &mdash; Digital DNA</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/ddna_wide.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> digitaldna
+          
+
+          
+            
+            <img src="../_static/ddna_wide.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">Digital DNA API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api.html#longestcommonsubsequence">LongestCommonSubsequence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#twitterddnasequencer">TwitterDDNASequencer</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#sequenceplots">SequencePlots</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">digitaldna</span></code>.SequencePlots</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples-using-digitaldna-sequenceplots">Examples using <code class="docutils literal notranslate"><span class="pre">digitaldna.SequencePlots</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">digitaldna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">Digital DNA API</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">digitaldna</span></code>.SequencePlots</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="digitaldna-sequenceplots">
+<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">digitaldna</span></code>.SequencePlots<a class="headerlink" href="#digitaldna-sequenceplots" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="digitaldna.SequencePlots">
+<em class="property">class </em><code class="descclassname">digitaldna.</code><code class="descname">SequencePlots</code><span class="sig-paren">(</span><em>alphabet=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/sequence_plots.html#SequencePlots"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.SequencePlots" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Digital DNA plots utility class.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>alphabet</strong> <span class="classifier-delimiter">:</span> <span class="classifier">string, optional</span></dt>
+<dd><p class="first last">The sequences’ alphabet, used to show prettier labels, possible values are:
+- ‘b3_type’
+- ‘b3_content’
+- ‘b6_content’
+- None
+Default: None</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#digitaldna.SequencePlots.plot_alphabet_distribution" title="digitaldna.SequencePlots.plot_alphabet_distribution"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_alphabet_distribution</span></code></a>(X)</td>
+<td>This function produces a box plot where each box represents the distribution of a letter in the sequences.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#digitaldna.SequencePlots.plot_intersequence_entropy" title="digitaldna.SequencePlots.plot_intersequence_entropy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_intersequence_entropy</span></code></a>(X)</td>
+<td>This function produces a composite plot.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#digitaldna.SequencePlots.plot_intrasequence_entropy" title="digitaldna.SequencePlots.plot_intrasequence_entropy"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_intrasequence_entropy</span></code></a>(X)</td>
+<td>This function produces a box plot with a single box representing the distribution of the intra-sequence entropies (the Shannon Entropy computed over a single digital gna sequence).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#digitaldna.SequencePlots.plot_sequences_color" title="digitaldna.SequencePlots.plot_sequences_color"><code class="xref py py-obj docutils literal notranslate"><span class="pre">plot_sequences_color</span></code></a>(X)</td>
+<td>This function produces a matrix image where each row is a digital dna sequence and each letter is represented by a different color.</td>
+</tr>
+</tbody>
+</table>
+<table border="1" class="docutils">
+<colgroup>
+<col width="74%" />
+<col width="26%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>compute_entropy_</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-even"><td><strong>find_alphabet_</strong></td>
+<td>&#160;</td>
+</tr>
+<tr class="row-odd"><td><strong>string_arr_to_int_matrix_</strong></td>
+<td>&#160;</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="digitaldna.SequencePlots.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>alphabet=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/sequence_plots.html#SequencePlots.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.SequencePlots.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.SequencePlots.plot_alphabet_distribution">
+<code class="descname">plot_alphabet_distribution</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/sequence_plots.html#SequencePlots.plot_alphabet_distribution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.SequencePlots.plot_alphabet_distribution" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function produces a box plot where each box represents the distribution of a letter
+in the sequences. The alphabet is inferred from the sequences.
+Parameters
+———-
+X : array-like, shape (n_samples, 1), mandatory</p>
+<blockquote>
+<div>The input sequences of digital dna</div></blockquote>
+<p>y : an instance of self</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.SequencePlots.plot_intersequence_entropy">
+<code class="descname">plot_intersequence_entropy</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/sequence_plots.html#SequencePlots.plot_intersequence_entropy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.SequencePlots.plot_intersequence_entropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function produces a composite plot. On the left a boxplot representing the distribution
+of the inter-sequence entropy (Shannon’s Entropy of the letters in the same with same sequence
+index but in different sequences). On the right a scatterplot of the entropies ordered by sequence index.
+Parameters
+———-
+X : array-like, shape (n_samples, 1), mandatory</p>
+<blockquote>
+<div>The input sequences of digital dna</div></blockquote>
+<p>y : an instance of self</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.SequencePlots.plot_intrasequence_entropy">
+<code class="descname">plot_intrasequence_entropy</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/sequence_plots.html#SequencePlots.plot_intrasequence_entropy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.SequencePlots.plot_intrasequence_entropy" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function produces a box plot with a single box representing the distribution of
+the intra-sequence entropies (the Shannon Entropy computed over a single digital gna sequence).
+Parameters
+———-
+X : array-like, shape (n_samples, 1), mandatory</p>
+<blockquote>
+<div>The input sequences of digital dna</div></blockquote>
+<p>y : an instance of self</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.SequencePlots.plot_sequences_color">
+<code class="descname">plot_sequences_color</code><span class="sig-paren">(</span><em>X</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/sequence_plots.html#SequencePlots.plot_sequences_color"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.SequencePlots.plot_sequences_color" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function produces a matrix image where each row is a digital dna sequence and each
+letter is represented by a different color.
+Parameters
+———-
+X : array-like, shape (n_samples, 1), mandatory</p>
+<blockquote>
+<div>The input sequences of digital dna</div></blockquote>
+<p>y : an instance of self</p>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="examples-using-digitaldna-sequenceplots">
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">digitaldna.SequencePlots</span></code><a class="headerlink" href="#examples-using-digitaldna-sequenceplots" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.TwitterDDNASequencer` "><div class="figure" id="id1">
+<img alt="../_images/sphx_glr_plot_sequence_color_thumb.png" src="../_images/sphx_glr_plot_sequence_color_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_sequence_color.html#sphx-glr-auto-examples-plot-sequence-color-py"><span class="std std-ref">Sequences by Color</span></a></span></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.TwitterDDNASequencer` "><div class="figure" id="id2">
+<img alt="../_images/sphx_glr_plot_sequence_inter_entropy_thumb.png" src="../_images/sphx_glr_plot_sequence_inter_entropy_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_sequence_inter_entropy.html#sphx-glr-auto-examples-plot-sequence-inter-entropy-py"><span class="std std-ref">Inter-sequence Entropy</span></a></span></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.TwitterDDNASequencer` "><div class="figure" id="id3">
+<img alt="../_images/sphx_glr_plot_sequence_alphabet_distribution_thumb.png" src="../_images/sphx_glr_plot_sequence_alphabet_distribution_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_sequence_alphabet_distribution.html#sphx-glr-auto-examples-plot-sequence-alphabet-distribution-py"><span class="std std-ref">Alphabet Distribution</span></a></span></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.SequencePlots` "><div class="figure" id="id4">
+<img alt="../_images/sphx_glr_plot_sequence_intra_entropy_thumb.png" src="../_images/sphx_glr_plot_sequence_intra_entropy_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_sequence_intra_entropy.html#sphx-glr-auto-examples-plot-sequence-intra-entropy-py"><span class="std std-ref">Intra-sequence Entropy</span></a></span></p>
+</div>
+</div><div style='clear:both'></div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Giuseppe Gagliano.
+      Last updated on Jan 22, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'0.1.0',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
