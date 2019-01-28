@@ -1,0 +1,508 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>digitaldna.TwitterDDNASequencer &mdash; Digital DNA</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/ddna_wide.png"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> digitaldna
+          
+
+          
+            
+            <img src="../_static/ddna_wide.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.5
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../quick_start.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../api.html">Digital DNA API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../api.html#longestcommonsubsequence">LongestCommonSubsequence</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../api.html#twitterddnasequencer">TwitterDDNASequencer</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">digitaldna</span></code>.TwitterDDNASequencer</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#examples-using-digitaldna-twitterddnasequencer">Examples using <code class="docutils literal notranslate"><span class="pre">digitaldna.TwitterDDNASequencer</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../api.html#sequenceplots">SequencePlots</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">Examples</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">digitaldna</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../api.html">Digital DNA API</a> &raquo;</li>
+        
+      <li><code class="docutils literal notranslate"><span class="pre">digitaldna</span></code>.TwitterDDNASequencer</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="digitaldna-twitterddnasequencer">
+<h1><code class="xref py py-mod docutils literal notranslate"><span class="pre">digitaldna</span></code>.TwitterDDNASequencer<a class="headerlink" href="#digitaldna-twitterddnasequencer" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="digitaldna.TwitterDDNASequencer">
+<em class="property">class </em><code class="descclassname">digitaldna.</code><code class="descname">TwitterDDNASequencer</code><span class="sig-paren">(</span><em>alphabet='b3_type'</em>, <em>input_file=''</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/twitter_sequencer.html#TwitterDDNASequencer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.TwitterDDNASequencer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Twitter Digital DNA Sequencer.
+Compute sequences of digital DNA from twitter timelines (check out
+<a class="reference external" href="https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html">https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html</a>)</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>alphabet</strong> <span class="classifier-delimiter">:</span> <span class="classifier">string or callable, default ‘b3_type’</span></dt>
+<dd><p class="first">mapping between the column value and the corresponding base.
+If <a href="#id7"><span class="problematic" id="id8">alphabet_</span></a> is a callable function, it is called on each
+pair of instances (rows) and the resulting value recorded.
+The callable should take two arrays as input and return
+one value indicating the distance between them.
+Prebuild alphabets are the following:</p>
+<ul class="last simple">
+<li><dl class="first docutils">
+<dt>‘b3_type’,  where the correspondence  is</dt>
+<dd><ul class="first last">
+<li>‘A’ for tweet</li>
+<li>‘C’ for reply</li>
+<li>‘T’ for retweet</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>‘b3_content’, where the correspondence  is</dt>
+<dd><ul class="first last">
+<li>‘N’ tweet contains no entities (plain text)</li>
+<li>‘E’ tweet contains entities of one type</li>
+<li>‘X’ tweet contains entities of mixed types</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>‘b6_content’, where the correspondence  is</dt>
+<dd><ul class="first last">
+<li>‘N’ tweet contains no entities (plain text)</li>
+<li>‘U’ tweet contains one or more URLs</li>
+<li>‘H’ tweet contains one or more hashtags</li>
+<li>‘M’ tweet contains one or more mentions</li>
+<li>‘D’ tweet contains one or more medias</li>
+<li>‘X’ tweet contains entities of mixed types</li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">References</p>
+<p>S. Cresci, R. D. Pietro, M. Petrocchi, A. Spognardi and M. Tesconi,
+“Social Fingerprinting: Detection of Spambot Groups Through DNA-Inspired Behavioral Modeling”,
+IEEE Transactions on Dependable and Secure Computing, vol. 15, no. 4, pp. 561-576, 1 July-Aug. 2018,
+<a class="reference external" href="https://ieeexplore.ieee.org/document/7876716">https://ieeexplore.ieee.org/document/7876716</a></p>
+<p>S. Cresci, R. di Pietro, M. Petrocchi, A. Spognardi and M. Tesconi,
+“Exploiting Digital DNA for the Analysis of Similarities in Twitter Behaviours”,
+2017 IEEE International Conference on Data Science and Advanced Analytics (DSAA),
+Tokyo, 2017, pp. 686-695, <a class="reference external" href="https://ieeexplore.ieee.org/document/8259831">https://ieeexplore.ieee.org/document/8259831</a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>input_shape</strong> <span class="classifier-delimiter">:</span> <span class="classifier">tuple</span></dt>
+<dd><p class="first last">The shape the data passed to <a class="reference internal" href="#digitaldna.TwitterDDNASequencer.fit" title="digitaldna.TwitterDDNASequencer.fit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">fit()</span></code></a></p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Methods</p>
+<table border="1" class="longtable docutils">
+<colgroup>
+<col width="10%" />
+<col width="90%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><a class="reference internal" href="#digitaldna.TwitterDDNASequencer.fit" title="digitaldna.TwitterDDNASequencer.fit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit</span></code></a>([X,&nbsp;y])</td>
+<td>Simply assigns the right alphabet mapper function to <a href="#id9"><span class="problematic" id="id10">remap_</span></a></td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#digitaldna.TwitterDDNASequencer.fit_transform" title="digitaldna.TwitterDDNASequencer.fit_transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fit_transform</span></code></a>([X,&nbsp;y])</td>
+<td>Fit and transform</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#digitaldna.TwitterDDNASequencer.get_params" title="digitaldna.TwitterDDNASequencer.get_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_params</span></code></a>()</td>
+<td>Get parameters for this estimator.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#digitaldna.TwitterDDNASequencer.set_params" title="digitaldna.TwitterDDNASequencer.set_params"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_params</span></code></a>(alphabet,&nbsp;input_file)</td>
+<td>Set the parameters of this estimator.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#digitaldna.TwitterDDNASequencer.transform" title="digitaldna.TwitterDDNASequencer.transform"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform</span></code></a>([X])</td>
+<td>The function that transform the array of timelines to digital dna sequences given the alphabet.</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="digitaldna.TwitterDDNASequencer.__init__">
+<code class="descname">__init__</code><span class="sig-paren">(</span><em>alphabet='b3_type'</em>, <em>input_file=''</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/twitter_sequencer.html#TwitterDDNASequencer.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.TwitterDDNASequencer.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.TwitterDDNASequencer.fit">
+<code class="descname">fit</code><span class="sig-paren">(</span><em>X=None</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/twitter_sequencer.html#TwitterDDNASequencer.fit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.TwitterDDNASequencer.fit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Simply assigns the right alphabet mapper function to <a href="#id11"><span class="problematic" id="id12">remap_</span></a></p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None</span></dt>
+<dd><p class="first last">The pipeline API requires this parameter.</p>
+</dd>
+<dt><strong>y</strong> <span class="classifier-delimiter">:</span> <span class="classifier">None</span></dt>
+<dd><p class="first last">There is no need of a target in a transformer, yet the pipeline API
+requires this parameter.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>self</strong> <span class="classifier-delimiter">:</span> <span class="classifier">object</span></dt>
+<dd><p class="first last">Returns an instance of self.</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Attributes:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>remap_</strong> <span class="classifier-delimiter">:</span> <span class="classifier">function that takes a tweet with the same format retrieved from</span></dt>
+<dd><p class="first last">GET statuses/user_timeline call and retrieves the corresponding character
+given the alphabet parameter.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.TwitterDDNASequencer.fit_transform">
+<code class="descname">fit_transform</code><span class="sig-paren">(</span><em>X=None</em>, <em>y=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/twitter_sequencer.html#TwitterDDNASequencer.fit_transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.TwitterDDNASequencer.fit_transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fit and transform</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like of shape = [# of tweets, 1]</span></dt>
+<dd><p class="first last">The input samples, each sample is a python dict of a tweet as retrieved
+from twitter user timelines API (check out
+<a class="reference external" href="https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html">https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html</a>)</p>
+</dd>
+<dt><strong>y: ignored parameter needed to mantain a standard pattern</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>X_transformed</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array of shape = [n_samples, 2]</span></dt>
+<dd><p class="first last">The resulting array where the first column is the user id and the second is the translated sequence</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.TwitterDDNASequencer.get_params">
+<code class="descname">get_params</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/twitter_sequencer.html#TwitterDDNASequencer.get_params"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.TwitterDDNASequencer.get_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get parameters for this estimator.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>params</strong> <span class="classifier-delimiter">:</span> <span class="classifier">mapping of string to any</span></dt>
+<dd><p class="first last">Parameter names mapped to their values.</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.TwitterDDNASequencer.set_params">
+<code class="descname">set_params</code><span class="sig-paren">(</span><em>alphabet</em>, <em>input_file</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/twitter_sequencer.html#TwitterDDNASequencer.set_params"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.TwitterDDNASequencer.set_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the parameters of this estimator. The method works on simple estimators as well as on nested objects
+(such as pipelines). The latter have parameters of the form <code class="docutils literal notranslate"><span class="pre">&lt;component&gt;__&lt;parameter&gt;</span></code> so that it’s possible
+to update each component of a nested object.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>self</strong></dt>
+<dd></dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="digitaldna.TwitterDDNASequencer.transform">
+<code class="descname">transform</code><span class="sig-paren">(</span><em>X=None</em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/digitaldna/twitter_sequencer.html#TwitterDDNASequencer.transform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#digitaldna.TwitterDDNASequencer.transform" title="Permalink to this definition">¶</a></dt>
+<dd><p>The function that transform the array of timelines to digital dna sequences given the alphabet.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><dl class="first docutils">
+<dt><strong>X</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array-like of shape = [# of tweets, 1]</span></dt>
+<dd><p class="first last">The input samples, each sample is a python dict of a tweet as retrieved
+from twitter user timelines API (check out
+<a class="reference external" href="https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html">https://developer.twitter.com/en/docs/tweets/timelines/api-reference/get-statuses-user_timeline.html</a>)</p>
+</dd>
+</dl>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><dl class="first last docutils">
+<dt><strong>X_transformed</strong> <span class="classifier-delimiter">:</span> <span class="classifier">array of string of shape = [# of users, 1]</span></dt>
+<dd><p class="first last">The array containing the digital dna sequences</p>
+</dd>
+</dl>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<div class="section" id="examples-using-digitaldna-twitterddnasequencer">
+<h2>Examples using <code class="docutils literal notranslate"><span class="pre">digitaldna.TwitterDDNASequencer</span></code><a class="headerlink" href="#examples-using-digitaldna-twitterddnasequencer" title="Permalink to this headline">¶</a></h2>
+<div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.TwitterDDNASequencer` "><div class="figure" id="id1">
+<img alt="../_images/sphx_glr_plot_sequence_color_thumb.png" src="../_images/sphx_glr_plot_sequence_color_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_sequence_color.html#sphx-glr-auto-examples-plot-sequence-color-py"><span class="std std-ref">Sequences by Color</span></a></span></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.TwitterDDNASequencer` "><div class="figure" id="id2">
+<img alt="../_images/sphx_glr_plot_sequence_inter_entropy_thumb.png" src="../_images/sphx_glr_plot_sequence_inter_entropy_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_sequence_inter_entropy.html#sphx-glr-auto-examples-plot-sequence-inter-entropy-py"><span class="std std-ref">Inter-sequence Entropy</span></a></span></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.TwitterDDNASequencer` "><div class="figure" id="id3">
+<img alt="../_images/sphx_glr_plot_sequence_alphabet_distribution_thumb.png" src="../_images/sphx_glr_plot_sequence_alphabet_distribution_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_sequence_alphabet_distribution.html#sphx-glr-auto-examples-plot-sequence-alphabet-distribution-py"><span class="std std-ref">Alphabet Distribution</span></a></span></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.SequencePlots` "><div class="figure" id="id4">
+<img alt="../_images/sphx_glr_plot_sequence_intra_entropy_thumb.png" src="../_images/sphx_glr_plot_sequence_intra_entropy_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_sequence_intra_entropy.html#sphx-glr-auto-examples-plot-sequence-intra-entropy-py"><span class="std std-ref">Intra-sequence Entropy</span></a></span></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.LongestCommonSubsequence` "><div class="figure" id="id5">
+<img alt="../_images/sphx_glr_plot_longest_common_subsequences_thumb.png" src="../_images/sphx_glr_plot_longest_common_subsequences_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_longest_common_subsequences.html#sphx-glr-auto-examples-plot-longest-common-subsequences-py"><span class="std std-ref">Longest Common Subsequences</span></a></span></p>
+</div>
+</div><div class="sphx-glr-thumbcontainer" tooltip="An example plot of :class:`digitaldna.LongestCommonSubsequence` "><div class="figure" id="id6">
+<img alt="../_images/sphx_glr_plot_log_longest_common_subsequences_thumb.png" src="../_images/sphx_glr_plot_log_longest_common_subsequences_thumb.png" />
+<p class="caption"><span class="caption-text"><a class="reference internal" href="../auto_examples/plot_log_longest_common_subsequences.html#sphx-glr-auto-examples-plot-log-longest-common-subsequences-py"><span class="std std-ref">Longest Common Subsequences (log)</span></a></span></p>
+</div>
+</div><div style='clear:both'></div></div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Giuseppe Gagliano.
+      Last updated on Jan 28, 2019.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'',
+            LANGUAGE:'None',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
